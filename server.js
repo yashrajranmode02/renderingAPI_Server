@@ -36,24 +36,11 @@ app.get('/api/info/:apiKey', (req, res) => {
     return res.status(401).json({ error: 'Invalid API Key' });
   }
 
-  let data;
-  if (apiKey === '12345') {
-    data = {
-      plan: 'Free Tier',
-      limit: '100 requests/day',
-      features: ['Basic API Access', 'Health Check']
-    };
-  } else if (apiKey === '67890') {
-    data = {
-      plan: 'Premium Tier',
-      limit: 'Unlimited requests',
-      features: ['Full API Access', 'Priority Support', 'Advanced Analytics']
-    };
-  }
+let data;
 
   res.json({
     message: 'Valid API Key',
-    data
+    url:"https://random.com"
   });
 });
 
