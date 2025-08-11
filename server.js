@@ -14,13 +14,13 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Root route for Render
-app.get('/', (req, res) => {
-  res.send(`
-    <h1>API is Running 🚀</h1>
-    <p>Use <code>/api/info/:apiKey</code> with a valid API key.</p>
-    <p>Example: <a href="/api/info/12345">/api/info/12345</a></p>
-    <p>Health Check: <a href="/health">/health</a></p>
-  `);
+app.get('/api/info/:api', (req, res) => {
+
+  res.send(
+    {
+        url:"www/google.com"
+    }
+  );
 });
 
 // Health check route
